@@ -37,6 +37,10 @@ export function text(str) {
     size = 32;
     y = 110;
   }
+  if (str.length >= 7) {
+    size = 28;
+    y = 110;
+  }
   var t = {
     type: "text",
     stroke: false,
