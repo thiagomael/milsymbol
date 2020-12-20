@@ -293,7 +293,8 @@ export default function(
     d: "M120,130 c-40,20 -80,-45 -40,-70 z M100,95 L140,75",
     fill: STD2525 ? iconFillColor : false
   };
-  icn["GR.IC.ELECTRONIC WARFARE"] = text("EW");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.IC.ELECTRONIC WARFARE"] = STD2525 ? text("GE") : text("EW");
   icn["GR.IC.EMERGENCY MEDICAL OPERATION"] = {
     type: "path",
     d:
@@ -411,8 +412,10 @@ export default function(
     d:
       "M70,85 l40,0 10,-10 0,50 -10,-10 -40,0 z M120,85 l10,0 M120,95 l10,0 M120,105 l10,0 M120,115 l10,0"
   };
-  icn["GR.IC.MILITARY INTELLIGENCE"] = text("MI");
-  icn["GR.IC.MILITARY POLICE"] = text("MP");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.IC.MILITARY INTELLIGENCE"] = STD2525 ? text("IM") : text("MI");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.IC.MILITARY POLICE"] = STD2525 ? text("PE") : text("MP");
   icn["GR.IC.MINE"] = {
     type: "path",
     d:
@@ -487,7 +490,8 @@ export default function(
       "M 90,97 83,83 m 27,14 7,-14 M 95,95 90,81 m 15,14 5,-14 m 10,26.5 c 0,6.9 -9,12.5 -20,12.5 -11,0 -20,-5.6 -20,-12.5 0,-6.9 9,-12.5 20,-12.5 11,0 20,5.6 20,12.5 z",
     fill: false
   };
-  icn["GR.IC.PERSONNEL SERVICES"] = text("PS");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.IC.PERSONNEL SERVICES"] = STD2525 ? text("RH") : text("PS");
   icn["GR.IC.PETROLEUM OIL LUBRICANTS"] = {
     type: "path",
     d: "m 100,119 0,-24 m 0,0 C 99,95 85,81 85,81 l 30,0 z",
@@ -604,8 +608,12 @@ export default function(
     fill: false,
     d: "m 120,100 -20,20 -20,-20 m 0,0 c 0,-25 40,-25 40,0 l -40,0"
   };
-  icn["GR.IC.SPECIAL FORCES"] = text("SF");
-  icn["GR.IC.SPECIAL OPERATIONS FORCES"] = text("SOF");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.IC.SPECIAL FORCES"] = STD2525 ? text("Aç Cmdos") : text("SF");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.IC.SPECIAL OPERATIONS FORCES"] = STD2525
+    ? text("Op Esp")
+    : text("SOF");
   icn["GR.IC.SURVEILLANCE"] = { type: "path", d: "m 100,80 -25,40 50,0 z" };
   icn["GR.IC.SURVEY"] = [
     { type: "path", d: "M85,120 l15,-15 15,15 ", fill: false },
@@ -615,7 +623,8 @@ export default function(
       fill: STD2525 ? iconFillColor : false
     }
   ];
-  icn["GR.IC.SUSTAINMENT"] = text("SUST");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.IC.SUSTAINMENT"] = STD2525 ? text("Log") : text("SUST");
   icn["GR.IC.TELEPHONE SWITCH"] = [
     { type: "text", stroke: false, x: 100, y: 135, fontsize: 30, text: "C" },
     { type: "path", fill: false, d: "M100,140 l0,-80  M70,60 l60,0" }
@@ -1306,7 +1315,8 @@ export default function(
   icn["GR.M1.AVIATION"] = { type: "path", d: "m 75,60 0,15 50,-15 0,15 z" };
   icn["GR.M1.BATTALION"] = textm1("II");
   icn["GR.M1.BIOLOGICAL"] = textm1("B");
-  icn["GR.M1.BORDER"] = textm1("BOR");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.M1.BORDER"] = STD2525 ? textm1("Fron") : textm1("BOR");
   icn["GR.M1.BRIDGING"] = {
     type: "path",
     fill: false,
@@ -1326,13 +1336,14 @@ export default function(
   icn["GR.M1.TILT-ROTOR"] = textm1("TR");
   icn["GR.M1.COMMAND POST NODE"] = textm1("CPN");
   icn["GR.M1.COMMUNICATIONS CONTINGENCY PACKAGE"] = textm1("CCP");
+  // HACK: 2525 aqui significa huehuebr
   icn["GR.M1.CONSTRUCTION"] = {
     type: "text",
     stroke: false,
     x: 100,
     y: 75,
     fontsize: 20,
-    text: "CONST"
+    text: STD2525 ? "Cnst" : "CONST"
   };
   icn["GR.M1.COMPANY"] = textm1("I");
   icn["GR.M1.CORPS"] = textm1("XXX");
@@ -1595,7 +1606,10 @@ export default function(
     fill: false
   };
   icn["GR.M1.SOUND RANGING"] = textm1("SDR");
-  icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"] = textm1("SOF");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.M1.SPECIAL OPERATIONS FORCES (SOF)"] = STD2525
+    ? textm1("Op Esp")
+    : textm1("SOF");
   icn["GR.M1.SPECIAL WEAPONS AND TACTICS"] = {
     type: "text",
     stroke: false,
@@ -1914,7 +1928,8 @@ export default function(
   icn["GR.M2.SHORT RANGE"] = textm2("SR");
   icn["GR.M2.STRATEGIC"] = textm2("STR");
   icn["GR.M2.STRATEGIC MISSILE"] = textm2("S");
-  icn["GR.M2.SUPPORT"] = textm2("SPT");
+  // HACK: 2525 aqui significa huehuebr
+  icn["GR.M2.SUPPORT"] = STD2525 ? textm2("Ap") : textm2("SPT");
   icn["GR.M2.TACTICAL"] = textm2("TAC");
   icn["GR.M2.TACTICAL MISSILE"] = textm2("T");
   icn["GR.M2.TARGET ACQUISITION"] = textm2("TA");
