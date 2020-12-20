@@ -392,11 +392,7 @@ export default {
       sId["201200"] = [icn["GR.IC.FF.US MARSHALS SERVICE"]];
       sId["201300"] = [icn["ST.IC.INTERNAL SECURITY FORCE"]];
 
-      sIdm1["01"] = [
-        _STD2525
-          ? icn["GR.M1.TACTICAL SATELLITE COMMUNICATIONS"]
-          : icn["GR.M1.AIRMOBILE/AIR ASSAULT"]
-      ];
+      sIdm1["01"] = [icn["GR.M1.AIRMOBILE/AIR ASSAULT"]];
       sIdm1["02"] = [icn["GR.M1.AREA"]];
       sIdm1["03"] = [icn["GR.M1.ATTACK"]];
       sIdm1["04"] = [icn["GR.M1.BIOLOGICAL"]];
